@@ -1,6 +1,9 @@
 {
-  "cleanUrls": false,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/arlixa", "destination": "/arlixa/index.html" },
+    { "source": "/fuelex", "destination": "/fuelex/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
