@@ -1,0 +1,252 @@
+/* Arlixa legal site — cinematic intimacy palette */
+:root {
+  --obsidian: #11100f;
+  --soft-black: #181614;
+  --elevated: #211d1b;
+  --border: #38302d;
+  --burgundy: #64283a;
+  --burgundy-bright: #7a3247;
+  --rose: #b77a83;
+  --champagne: #d8c09a;
+  --champagne-deep: #8a6a3e;
+  --ivory: #f3ebdd;
+  --ivory-soft: rgba(243, 235, 221, 0.78);
+  --muted: #817771;
+  --secondary: #b8aea7;
+  --ember: #c4614f;
+  --sage: #8fa58a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ivory-soft);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(100, 40, 58, 0.35), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(60, 24, 38, 0.25), transparent 50%),
+    var(--obsidian);
+}
+
+a {
+  color: var(--champagne);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--ivory);
+}
+
+.wrap {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 48px 22px 96px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-mark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
+.brand h1,
+.doc-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--ivory);
+  margin: 0;
+}
+
+.brand .tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--rose);
+  margin: 4px 0 0;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+nav.toc {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 28px 0 36px;
+}
+
+nav.toc strong {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 12px;
+}
+
+nav.toc ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--secondary);
+}
+
+nav.toc li {
+  margin: 6px 0;
+}
+
+.card-grid {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 40px;
+}
+
+.card {
+  display: block;
+  padding: 22px 24px;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.card:hover {
+  border-color: var(--burgundy-bright);
+  background: #261f1d;
+  color: inherit;
+}
+.card h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 0 0 6px;
+}
+.card p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: 1.55rem;
+  color: var(--ivory);
+  margin: 2.4rem 0 0.75rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--champagne);
+  margin: 1.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+ul,
+ol {
+  margin: 0.6rem 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--ivory-soft);
+}
+
+li {
+  margin: 0.35rem 0;
+}
+
+.note {
+  background: rgba(100, 40, 58, 0.28);
+  border-left: 3px solid var(--burgundy-bright);
+  padding: 14px 16px;
+  border-radius: 0 10px 10px 0;
+  color: var(--secondary);
+  margin: 1.25rem 0;
+}
+
+.note strong {
+  color: var(--champagne);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 1rem 0 1.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  color: var(--champagne);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+footer .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 16px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
